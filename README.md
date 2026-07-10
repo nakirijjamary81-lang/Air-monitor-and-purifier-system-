@@ -9,15 +9,18 @@ Step 1: Start Serial Communication
 Serial.begin(9600);
 dustSerial.begin(9600);
 • 9600 baud rate for monitoring and dust sensor communication.
+
 Step 2: Initialize LCD
 lcd.init();
 lcd.backlight();
 Displays:
 Air Quality Init
+
 Step 3: Set Pin Modes
 pinMode(FAN_PIN, OUTPUT);
 pinMode(BUZZER_PIN, OUTPUT);
 pinMode(LED_PIN, OUTPUT);
+
 Step 4: Default OFF State
 digitalWrite(FAN_PIN, LOW);
 digitalWrite(BUZZER_PIN, LOW);
