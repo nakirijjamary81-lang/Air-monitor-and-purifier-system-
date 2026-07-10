@@ -1,6 +1,6 @@
 # Air-monitor-and-purifier-system-
-Problem: Indoor air pollution from dust, smoke, and harmful gases is a major health concern causing asthma and respiratory diseases. Most homes and offices do not have affordable systems to monitor and purify air automatically.  
-Solution: This project develops a low-cost, automated air purifier using Arduino. The system MQ135 and DSM501A sensors to detect gas and dust levels. When pollution exceeds safe thresholds 300ppm gas and 100micro gram per meter cubed for dust,the system automatically turns ON a fan to purify the air and activates a buzzer to alert users. Air quality readings are displayed on an LCD for real-time monitoring.
+Problem: Indoor air pollution from dust, smoke, and harmful gases is a major health concern. Most homes and offices do not have affordable systems to monitor and purify air automatically.  
+Solution: This project developed a low-cost, automated air purifier using Arduino. The system MQ135 and DSM501A sensors to detect gas and dust levels. When pollution exceeded safe thresholds 300ppm gas and 100micro gram per meter cubed for dust,the system automatically turned ON a fan to purify the air and activated a buzzer to alert users. Air quality readings were displayed on an LCD for real-time monitoring.
 
 Setup Instructions
 Follow these steps to install, configure, and run the setup() Function
@@ -9,18 +9,15 @@ Step 1: Start Serial Communication
 Serial.begin(9600);
 dustSerial.begin(9600);
 • 9600 baud rate for monitoring and dust sensor communication.
-
 Step 2: Initialize LCD
 lcd.init();
 lcd.backlight();
 Displays:
 Air Quality Init
-
 Step 3: Set Pin Modes
 pinMode(FAN_PIN, OUTPUT);
 pinMode(BUZZER_PIN, OUTPUT);
 pinMode(LED_PIN, OUTPUT);
-
 Step 4: Default OFF State
 digitalWrite(FAN_PIN, LOW);
 digitalWrite(BUZZER_PIN, LOW);
